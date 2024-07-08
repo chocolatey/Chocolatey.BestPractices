@@ -1,0 +1,12 @@
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="CopyEditorConfig" AfterTargets="BeforeBuild" BeforeTargets="CoreBuild">
+    <Message Text="Copying the .editorconfig file from '$(MSBuildThisFileDirectory)/.editorconfig' to '$(MSBuildProjectDirectory)/../.editorconfig'"></Message>
+    <Copy 
+      SourceFiles="$(MSBuildThisFileDirectory)/.editorconfig"
+      DestinationFiles="$(MSBuildProjectDirectory)/../.editorconfig"
+      SkipUnchangedFiles="true"
+      UseHardlinksIfPossible="false" />
+  </Target>
+
+</Project>

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+
+    <!-- exclude dll / pdb from package when using `dotnet pack` as the dll generated is effectively empty -->
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Chocolatey.BestPractices.props" Pack="true" PackagePath="/build" />
+    <None Include="Chocolatey.BestPractices.targets" Pack="true" PackagePath="/build" />
+    <None Include=".editorconfig" Pack="true" PackagePath="/build" />
+    <None Include="readme.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>
