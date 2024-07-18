@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-./build.sh --configuration=ReleaseOfficial $*
+./build.sh --configuration=Release $*

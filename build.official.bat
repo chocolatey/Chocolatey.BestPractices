@@ -5,7 +5,7 @@ echo ============= WRAP POWERSHELL SCRIPT =============
 echo ==================================================
 
 echo calling %psscript% with args %*
-PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& '%psscript%' -Configuration ReleaseOfficial %*"
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& '%psscript%' -Configuration Release %*"
 set buildstatus=%ERRORLEVEL%
 echo ==================================================
 exit /b %buildstatus%
